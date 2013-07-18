@@ -410,3 +410,8 @@ function parse_git_branch {
   git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/[\1$(parse_git_dirty)]/"
 }
 
+function ps_ids {
+ps -ef | grep $1 | grep -v grep | awk '{print $2}'
+}
+
+

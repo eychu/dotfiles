@@ -1,10 +1,11 @@
-# readline config (used by bash and others)
-
-# Ignore case when doing completion. Works on HFS+, UFS, whatever.
 set completion-ignore-case On
 
-# Show all matches when there's ambiguity.
-set show-all-if-ambiguous On
+set expand-tilde on
+set convert-meta off
+set input-meta on
+set output-meta on
+set show-all-if-ambiguous on
+set visible-stats on
 
 # Immediately add a trailing slash when autocompleting symlinks to directories
 set mark-symlinked-directories on
@@ -18,8 +19,9 @@ set mark-symlinked-directories on
 set visible-stats On
 
 # Use vi keystrokes in readline apps like psql
-set editing-mode vi
+#set editing-mode vi
 
+# Be more intelligent when autocompleting by also looking at the text after
 # Be more intelligent when autocompleting by also looking at the text after
 # the cursor. For example, when the current line is "cd ~/src/mozil", and
 # the cursor is on the "z", pressing Tab will not autocomplete it to "cd
@@ -27,4 +29,17 @@ set editing-mode vi
 # Readline used by Bash 4.)
 # This is turned off because I don't think I have bash 4 most places.
 #set skip-completed-text on
+set bind-tty-special-chars off
+set horizontal-scroll-mode
 
+# this makes the "delete" key work rather than
+# just entering a ~
+
+"\e[1;5D": backward-word
+"\e[1;5C": forward-word
+"\C-w": backward-kill-word
+
+"\e[1~": beginning-of-line
+"\e[4~": end-of-line
+"\e[5~": beginning-of-history
+"\e[6~": end-of-history

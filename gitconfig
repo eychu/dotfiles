@@ -1,12 +1,38 @@
 [user]
-    name = Dan Lowe
-    email = dan@tangledhelix.com
+    name = Artem Petrov
+    email = partos0511@gmail.com
+    user = Partos
+[help]
+    autocorrect = 1
+
+[push]
+    default = current
+
+[color]
+    diff = auto
+    status = auto
+    branch = auto
+    interactive = auto
+    ui = true
+    pager = true
+
+[github]
+    user = artempartos
+
+[diff]
+    # For Github-style word diffs
+    wordRegex = [^[:space:]]
+
+[merge]
+    summary = true
+    tool = vimdiff
 
 [alias]
     co = checkout
     ci = commit
     cm = commit -m
-    st = status -s
+    st = status
+    br = branch -v
     lol = log --pretty=oneline --abbrev-commit --graph --decorate
     lg  = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
     lgp = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit -p
@@ -24,6 +50,16 @@
     remotes = remote -v
     filechanges = diff --summary
     changes = diff --name-status
+    ll = log -10 --pretty=format:\"%h %Cblue%ar %Cgreen%an%Creset: %s %Cred%d\"
+    gr = log --graph --pretty=format:\"%Cred%h %Cblue%ar%Creset %Cgreen%an%Creset %s %Cred%d\"
+    where = branch -av --contains
+    unstage = reset HEAD --
+    last = log -1 HEAD
+    up = pull --rebase
+    put = push origin HEAD
+    tc = diff --cached
+    rmdf = !git rm $(git ls-files --deleted)
+    tree = log --graph --full-history --all --color --date=short --pretty=format:\"%Cred%x09%h %Creset%ad%Cblue%d %Creset %s %C(bold)(%an)%Creset\"
 
 [core]
     pager = less
@@ -31,30 +67,4 @@
     quotepath = false
     excludesfile = ~/.gitignore
 
-[color]
-    branch = auto
-    diff = auto
-    interactive = auto
-    status = auto
-    ui = auto
 
-[github]
-    user = tangledhelix
-
-[diff]
-    # For Github-style word diffs
-    wordRegex = [^[:space:]]
-
-[help]
-    autocorrect = 1
-
-[push]
-    # Push current branch even if you've never pushed it before
-    default = current
-
-[difftool "sourcetree"]
-	cmd = /Applications/Kaleidoscope.app/Contents/MacOS/ksdiff -w \"$LOCAL\" \"$REMOTE\"
-	path = 
-[mergetool "sourcetree"]
-	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
