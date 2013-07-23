@@ -1,7 +1,7 @@
 [user]
-    name = Artem Petrov
-    email = partos0511@gmail.com
-    user = Partos
+    name = Alexey Chuvashov
+    email = alexeychu@gmail.com
+    user = eychu
 [help]
     autocorrect = 1
 
@@ -17,7 +17,7 @@
     pager = true
 
 [github]
-    user = artempartos
+    user = eychu
 
 [diff]
     # For Github-style word diffs
