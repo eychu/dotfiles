@@ -30,7 +30,7 @@ set visible-stats On
 # This is turned off because I don't think I have bash 4 most places.
 #set skip-completed-text on
 set bind-tty-special-chars off
-set horizontal-scroll-mode
+#set horizontal-scroll-mode
 
 # this makes the "delete" key work rather than
 # just entering a ~
