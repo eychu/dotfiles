@@ -24,6 +24,7 @@ source ~/.bash/completion.sh
 source ~/.bash/project-mgmt.sh
 source ~/.bash/non-root.sh
 source ~/.bash/git-completion.bash
+source ~/.bash/git-flow-completion.bash
 
 test -f ~/.bashrc.local && source ~/.bashrc.local
 
