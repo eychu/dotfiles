@@ -109,7 +109,7 @@ test -n "$INTERACTIVE" && {
     # Show the current number of jobs (in red if > 0), then a prompt
     # PS1="$PS1[\[\$(_xc_jobs)\]\j\[$(_xcr)\]]\\$ "
 
-  export PS1='\u:\[\033[$(_xcu 35)\]\w\[\033[0;36m\]$(parse_git_branch)\[\e[0m\]$ '
+  export PS1='\u:\[\033[$(_xcu 35)\]\w\[\033[0;36m\]$(parse_git_branch)\[\e[0m\]\n$ '
     # export PS1
 
     # A decent tcsh prompt:

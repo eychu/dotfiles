@@ -23,12 +23,10 @@ source ~/.bash/mac.sh
 source ~/.bash/completion.sh
 source ~/.bash/project-mgmt.sh
 source ~/.bash/non-root.sh
+source ~/.bash/git-completion.sh
+source ~/.bash/git-flow-completion.sh
 
 test -f ~/.bashrc.local && source ~/.bashrc.local
-
-if [ -f ~/.git-completion.bash ]; then
-  . ~/.git-completion.bash
-fi
 
 # set a fancy prompt (non-color, unless we know we "want" color)
 case "$TERM" in
@@ -42,7 +40,7 @@ test -f ~/.bash_profile.local && echo '   === .bash_profile.local exists ==='
 # test 'true'
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
-export PATH=/opt/local/bin:/opt/local/sbin:$PATH
+#export PATH=/opt/local/bin:/opt/local/sbin:$PATH
 
 if [ -f `brew --prefix`/etc/bash-completion ]; then
  . `brew --prefix`/etc/bash-completion
@@ -52,5 +50,5 @@ if [ -f /opt/local/etc/bash_completion ]; then
  /opt/local/etc/bash_completion
 fi
 
-export CLICOLOR=1
+export CLICOLOR=1s
 export LSCOLORS=ExFxCxDxCxegedabagacad

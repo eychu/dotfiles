@@ -36,6 +36,7 @@
     lol = log --pretty=oneline --abbrev-commit --graph --decorate
     lg  = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
     lgp = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit -p
+
     unstage = reset HEAD
     aa = add .
     # Not yet added - doesn't include ignored files
@@ -59,6 +60,10 @@
     put = push origin HEAD
     tc = diff --cached
     rmdf = !git rm $(git ls-files --deleted)
+    g = git
+    gst = g st
+    gco = g co
+    gci = g ci
     tree = log --graph --full-history --all --color --date=short --pretty=format:\"%Cred%x09%h %Creset%ad%Cblue%d %Creset %s %C(bold)(%an)%Creset\"
 
 [core]
