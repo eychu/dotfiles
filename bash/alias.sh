@@ -8,6 +8,7 @@ else
     alias projls="/bin/ls"
 fi
 
+alias g='git'
 alias ggraph="git log --graph --decorate --pretty=oneline --abbrev-commit"
 
 # CVS at work uses an unexpected path. This is aliased because it breaks other
