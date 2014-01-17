@@ -40,7 +40,13 @@ test -f ~/.bash_profile.local && echo '   === .bash_profile.local exists ==='
 # test 'true'
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
-#export PATH=/opt/local/bin:/opt/local/sbin:$PATH
+export PATH=/opt/local/bin:/opt/local/sbin:$PATH
+
+export PATH=/usr/local/go/bin:$PATH
+
+if [ -f /usr/local/go ]; then
+    export PATH=/usr/local/go/bin:$PATH
+fi
 
 if [ -f `brew --prefix`/etc/bash-completion ]; then
  . `brew --prefix`/etc/bash-completion
