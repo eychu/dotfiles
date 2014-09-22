@@ -58,3 +58,5 @@ fi
 
 export CLICOLOR=1s
 export LSCOLORS=ExFxCxDxCxegedabagacad
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
