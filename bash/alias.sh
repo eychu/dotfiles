@@ -107,4 +107,5 @@ alias reload="source ~/.bashrc"
 # commands starting with % for pasting from web
 alias %=" "
 
-alias psqlstart="postgres -D /usr/local/var/postgres"
+alias postgresstart="postgres -D /usr/local/var/postgres"
+alias redisstart="redis-server /Users/eychu/.redis/redis.conf"
