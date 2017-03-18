@@ -241,12 +241,12 @@ endif
 
 set expandtab
 
-set tabstop=4
-set softtabstop=4
+set tabstop=2
+set softtabstop=2
 
 " Number of columns to use for (auto)indent. Generally this should be the
 " same as the tabstop.
-set shiftwidth=4
+set shiftwidth=2
 
 " Set or show tab width info
 nnoremap <leader>T :Stab<cr>
@@ -906,5 +906,6 @@ hi def InterestingWord6 guifg=#000000 ctermfg=16 guibg=#ff2c4b ctermbg=195
 if filereadable($HOME . '/.vimrc.local')
     source ~/.vimrc.local
 endif
+
 
 " ------------------------------------------------------------------------ }}}

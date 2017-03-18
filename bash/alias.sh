@@ -109,3 +109,6 @@ alias %=" "
 
 alias postgresstart="postgres -D /usr/local/var/postgres"
 alias redisstart="redis-server /Users/eychu/.redis/redis.conf"
+
+alias фак='fuck'
+alias агсл='fuck'
